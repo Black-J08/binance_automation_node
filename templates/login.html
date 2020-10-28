@@ -1,0 +1,20 @@
+{% extends "base.html" %} 
+
+{% block head %}
+<title>Login</title>
+{% endblock %} 
+
+{% block body %}
+<div style="text-align: center; margin-top: 15%">
+  <h1>Login</h1>
+  <div>
+    <input type="email" id="login_email" placeholder="email" />
+  </div>
+  <br />
+  <div>
+    <input type="password" id="login_password" placeholder="password" />
+  </div>
+  <br />
+  <input type="submit" id="login_button" placeholder="Submit"/>
+</div>
+{% endblock %}
