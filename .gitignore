@@ -14,3 +14,5 @@ build/
 *.egg-info/
 
 .vscode
+
+static/js/init-firebase.js
