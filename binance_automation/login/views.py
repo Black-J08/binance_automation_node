@@ -1,3 +1,4 @@
+from binance_automation import init_firebase_admin
 from flask import Blueprint, render_template
 
 login_bp = Blueprint('login', __name__)

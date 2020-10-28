@@ -16,3 +16,4 @@ build/
 .vscode
 
 static/js/init-firebase.js
+serviceAccountKey.json

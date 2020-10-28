@@ -9,6 +9,7 @@ autopep8 = "*"
 
 [packages]
 flask = "*"
+firebase-admin = "*"
 
 [requires]
 python_version = "3.8"

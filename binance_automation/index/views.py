@@ -1,3 +1,4 @@
+from binance_automation import init_firebase_admin
 from flask import Blueprint
 
 index_bp = Blueprint('index', __name__)
