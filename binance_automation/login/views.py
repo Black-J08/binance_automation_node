@@ -8,7 +8,14 @@ login_bp = Blueprint('login', __name__)
 @login_bp.route('/login', methods=['POST', 'GET'])
 def login():
     if request.method == 'GET':
-        return render_template('login.html')
+        session_cookie = request.cookies.get('session')
+        if not session_cookie:
+            return render_template('login.html')
+        try:
+            auth.verify_session_cookie(session_cookie, check_revoked=True)
+            return redirect('/')
+        except auth.InvalidSessionCookieError:
+            return render_template('login.html')
     
     elif request.method == 'POST':
         idToken = request.json['idToken']
